@@ -1,0 +1,37 @@
+{
+  "name": "mybackend",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=local nodemon server.js",
+    "staging": "(lsof -t -i:4070 | xargs -r kill -9) && NODE_ENV=staging node server.js",
+    "production": "NODE_ENV=production node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.9.0",
+    "bcrypt": "^6.0.0",
+    "chalk": "^5.4.1",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "google-auth-library": "^10.0.0",
+    "joi": "^17.13.3",
+    "morgan": "^1.10.0",
+    "nodemailer": "^7.0.3",
+    "openai": "^5.8.2",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "path": "^0.12.7",
+    "pg": "^8.16.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7",
+    "url": "^0.11.4"
+  }
+}
